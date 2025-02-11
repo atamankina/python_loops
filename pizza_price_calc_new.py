@@ -1,22 +1,22 @@
-pizza_price = float(input("Wie viel kostet eine Pizza? "))
-
-if pizza_price < 0:
-    print("Fehler: Pizza Preis darf nicht negativ sein.")
+try:
+    pizza_price = float(input("Wie viel kostet eine Pizza? "))
+    number_pieces = int(input("Wie viele Stuecke von Pizza wurden gegessen? "))
+except ValueError:
+    print("Fehler: die Eingabe muss eine Zahl sein.")
     exit()
 
-if pizza_price > 100:
-    print("Fehler: Pizza Preis darf nicht zu hoch sein.")
+if pizza_price <= 0 or pizza_price >= 100:
+    print("Fehler: Die Preiseingabe liegt im ungueltigen Bereich.")
     exit()
 
-number_pieces = int(input("Wie viele Stuecke von Pizza wurden gegessen? "))
-
-if number_pieces < 0:
-    print("Fehler: Anzahl Stuecke kann nicht negativ sein.")
+if number_pieces <= 0 or number_pieces >= 20:
+    print("Fehler: Die eingegebene Anzahl ist ungueltig.")
     exit()
 
-if number_pieces > 20:
-    print("Eine Pizza kann nicht so viele Stuecke haben.")
-    exit()
+# Man kann alles in einer Bedingung pruefen, aber die Fehlermeldung ist nicht spezifisch.
+#if pizza_price <= 0 or number_pieces <= 0 or pizza_price > 100 or number_pieces > 20:
+#    print("Fehler: Die Eingaben sind ungueltig.")
+#    exit()
 
 pieces_eaten = {}
 pieces_eaten_total = 0
