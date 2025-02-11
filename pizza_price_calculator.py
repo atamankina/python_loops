@@ -23,10 +23,12 @@ for person in pieces_eaten:
     pieces_eaten_total += pieces_eaten[person]
 
 if pieces_eaten_total > number_pieces:
-    print(f"Fehler, Anzahl gegessenen Stuecke {pieces_eaten_total} groesser als gesamte Stuecke {pieces_eaten}.")
+    print(f"Fehler, Anzahl gegessenen Stuecke {pieces_eaten_total} groesser als gesamte Stuecke {number_pieces}.")
+    exit()
 
 price_per_piece = pizza_price / number_pieces
 
+print("Die Rechnungen sind wie folgt:")
 for person in pieces_eaten:
     bill = round(price_per_piece * pieces_eaten[person], 2)
     print(f"{person} hat {pieces_eaten[person]} Stueck Pizza gegessen. Zu zahlen sind {bill}.")
