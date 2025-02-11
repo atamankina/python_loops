@@ -1,5 +1,22 @@
 pizza_price = float(input("Wie viel kostet eine Pizza? "))
+
+if pizza_price < 0:
+    print("Fehler: Pizza Preis darf nicht negativ sein.")
+    exit()
+
+if pizza_price > 100:
+    print("Fehler: Pizza Preis darf nicht zu hoch sein.")
+    exit()
+
 number_pieces = int(input("Wie viele Stuecke von Pizza wurden gegessen? "))
+
+if number_pieces < 0:
+    print("Fehler: Anzahl Stuecke kann nicht negativ sein.")
+    exit()
+
+if number_pieces > 20:
+    print("Eine Pizza kann nicht so viele Stuecke haben.")
+    exit()
 
 pieces_eaten = {}
 pieces_eaten_total = 0
