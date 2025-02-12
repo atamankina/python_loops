@@ -14,9 +14,9 @@ if number_pieces <= 0 or number_pieces >= 20:
     exit()
 
 # Man kann alles in einer Bedingung pruefen, aber die Fehlermeldung ist nicht spezifisch.
-#if pizza_price <= 0 or number_pieces <= 0 or pizza_price > 100 or number_pieces > 20:
-#    print("Fehler: Die Eingaben sind ungueltig.")
-#    exit()
+# if pizza_price <= 0 or number_pieces <= 0 or pizza_price > 100 or number_pieces > 20:
+#     print("Fehler: Die Eingaben sind ungueltig.")
+#     exit()
 
 pieces_eaten = {}
 pieces_eaten_total = 0
