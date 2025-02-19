@@ -156,36 +156,6 @@ Tuples sind ideal, wenn du **feste Datensätze** hast, die nicht bearbeitet werd
 
 ---
 
-## 6. Beispiel: Spielerpositionen in einem Spiel 🎮
-
-Angenommen, wir speichern die **Position** eines Spielers als Tuple `(x, y)` und geben sie einer Funktion, die den Spieler zeichnen soll:
-
-```python
-def spieler_zeichnen(position):
-    x, y = position  # Entpacken des Tuples
-    print(f"Zeichne Spieler bei ({x}, {y})")
-
-def main():
-    player_pos = (10, 20)
-    spieler_zeichnen(player_pos)
-
-    # Versuche, die Position direkt zu ändern
-    # player_pos[0] = 15  # FALSCH, TypeError
-    # Stattdessen:
-    player_pos = (15, player_pos[1])  # neues Tuple
-    spieler_zeichnen(player_pos)
-
-if __name__ == "__main__":
-    main()
-```
-
-**Zusammengefasst**:  
-- Wir speichern `(10, 20)` als Player-Position.  
-- In `spieler_zeichnen` entpacken wir das Tuple in `x` und `y`.  
-- Um die Position zu ändern, müssen wir ein **neues** Tuple anlegen, da das alte unveränderlich ist.
-
----
-
 ## 7. Häufige Stolpersteine 🚨
 
 1. **Verwechslung mit Listen**  

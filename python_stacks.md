@@ -127,48 +127,6 @@ if __name__ == "__main__":
 
 ---
 
-## 6. Aktivität: „Stein auf Stein!“
-
-### 🏆 Aufgabe
-
-Implementiere einen einfachen „Stapelturm“ aus **Blöcken**:
-
-1. `block_hinzufuegen(stack, block)`: Legt einen Stein namens `block` oben auf den Stapel.  
-2. `block_entfernen(stack)`: Nimmt den obersten Stein weg und gibt ihn zurück – falls keiner da ist, gib `"Kein Stein zum Entfernen!"` aus.  
-3. `turm_anzeigen(stack)`: Zeige den aktuellen Stapel an (von unten nach oben).  
-
-**Mustergerüst**:
-
-```python
-def block_hinzufuegen(stack, block):
-    # TODO: oben auflegen
-
-def block_entfernen(stack):
-    # TODO: obersten Stein abnehmen und zurückgeben
-
-def turm_anzeigen(stack):
-    # TODO: stapel der Reihe nach anzeigen (z.B. von unten nach oben)
-
-def main():
-    turm = []
-    block_hinzufuegen(turm, "Stein1")
-    block_hinzufuegen(turm, "Stein2")
-    block_hinzufuegen(turm, "Stein3")
-
-    turm_anzeigen(turm)
-
-    entfernter_stein = block_entfernen(turm)
-    print("Entfernter Stein:", entfernter_stein)
-    turm_anzeigen(turm)
-
-if __name__ == "__main__":
-    main()
-```
-
-> 💡 **Tipp**: Achte darauf, dass du nur die Stack-Methoden `append()` und `pop()` nutzt, um das LIFO-Prinzip beizubehalten.
-
----
-
 ## 7. Häufige Fehler & Stolpersteine 🚨
 
 1. **Benutzen von `insert(0, ...)`**  

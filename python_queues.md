@@ -128,49 +128,6 @@ if __name__ == "__main__":
 
 ---
 
-## 6. Aktivität: „Befehle abarbeiten!“
-
-### 🏆 Aufgabe
-
-Implementiere eine Funktion, die eingehende **Befehle** in einer Queue speichert und der Reihe nach abarbeitet:
-
-1. `befehl_hinzufuegen(queue, befehl)`: Legt einen neuen Befehl in die Queue.  
-2. `befehl_ausfuehren(queue)`: Nimmt den **ersten** Befehl raus und führt ihn aus – falls keiner vorhanden ist, Hinweis `"Keine Befehle in der Warteschlange!"`.  
-3. `queue_anzeigen(queue)`: Zeigt den aktuellen Inhalt der Queue an (in Reihenfolge).
-
-**Mustergerüst**:
-
-```python
-def befehl_hinzufuegen(queue, befehl):
-    # TODO: enqueue
-
-def befehl_ausfuehren(queue):
-    # TODO: dequeue und ausführen
-
-def queue_anzeigen(queue):
-    # TODO: gesamten Inhalt zeigen
-
-def main():
-    befehle_queue = []
-
-    befehl_hinzufuegen(befehle_queue, "Bewegung nach Norden")
-    befehl_hinzufuegen(befehle_queue, "Angreifen")
-    befehl_hinzufuegen(befehle_queue, "Heiltrank trinken")
-
-    queue_anzeigen(befehle_queue)
-
-    befehl_ausfuehren(befehle_queue)
-    befehl_ausfuehren(befehle_queue)
-    queue_anzeigen(befehle_queue)
-
-if __name__ == "__main__":
-    main()
-```
-
-> 💡 **Tipp**: Überprüfe immer, ob die Queue leer ist, bevor du `pop(0)` aufrufst.
-
----
-
 ## 7. Häufige Fehler & Stolpersteine 🚨
 
 1. **Einsatz von `pop()` statt `pop(0)`**  
